@@ -1,0 +1,33 @@
+# Java / Maven
+spatify-backend/target/
+spatify-backend/.classpath
+spatify-backend/.project
+spatify-backend/.settings/
+spatify-backend/.idea/
+spatify-backend/**/*.iml
+spatify-backend/.mvn/
+
+# Node / React
+spatify-frontend/node_modules/
+spatify-frontend/dist/
+spatify-frontend/build/
+spatify-frontend/.cache/
+spatify-frontend/.vite/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Env / secrets
+.env
+.env.*
+
+# Misc
+*.class
