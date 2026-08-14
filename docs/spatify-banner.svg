@@ -1,0 +1,23 @@
+<svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1200" y1="0" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="300" x2="900" y1="0" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDE68A"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="320" rx="26" fill="url(#bg)"/>
+  <circle cx="161" cy="160" r="120" fill="url(#gold)" opacity="0.14"/>
+  <circle cx="1050" cy="80" r="90" fill="#34D399" opacity="0.12"/>
+  <rect x="68" y="60" width="280" height="200" rx="24" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.10)"/>
+  <path d="M115 170C154 125 197 112 230 130C264 149 282 190 319 171C344 158 356 128 383 109" stroke="url(#gold)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M120 182L146 156L170 182L193 148L221 182L247 146L274 182" stroke="#F8FAFC" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="465" y="138" fill="#F8FAFC" font-size="48" font-weight="700" font-family="Segoe UI, Arial, sans-serif">SPATIFY</text>
+  <text x="465" y="196" fill="#FDE68A" font-size="26" font-weight="600" font-family="Segoe UI, Arial, sans-serif">Luxury Salon &amp; Spa Management</text>
+  <text x="465" y="240" fill="#CBD5E1" font-size="19" font-family="Segoe UI, Arial, sans-serif">Bookings • Staff • Payroll • Admin Ops • Customer Experience</text>
+  <rect x="465" y="255" width="190" height="36" rx="18" fill="#F59E0B"/>
+  <text x="510" y="279" fill="#111827" font-size="18" font-weight="700" font-family="Segoe UI, Arial, sans-serif">Live Demo</text>
+</svg>

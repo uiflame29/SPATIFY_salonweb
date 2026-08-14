@@ -1,10 +1,15 @@
 @echo off
+setlocal
+
+set "SERVER_PORT=5218"
+set "FRONTEND_PORT=8126"
+
 echo ===================================================
 echo             SPATIFY LUXURY SALON SYSTEM
 echo ===================================================
 echo.
-echo Cleaning up existing processes...
-:: Kill any existing java or node processes that might be holding ports 5218 or 8126
+echo Cleaning up local dev processes...
+:: Kill any existing Java or Node processes that may be holding local app ports.
 taskkill /F /IM java.exe >nul 2>&1
 taskkill /F /IM node.exe >nul 2>&1
 echo Processes cleaned up.
@@ -23,21 +28,21 @@ if %errorlevel% neq 0 (
 )
 
 :: Start the Backend in a new window
-echo Launching Backend (Port 5218)...
-start "Spatify Backend" cmd /k "cd /d %~dp0spatify-backend && title Spatify Backend Server && color 0B && echo Starting Spring Boot... && set PGPASSWORD=postgres && C:\tools\apache-maven-3.9.15\bin\mvn.cmd spring-boot:run"
+echo Launching Backend (Port %SERVER_PORT%)...
+start "Spatify Backend" cmd /k "cd /d %~dp0spatify-backend && title Spatify Backend Server && color 0B && echo Starting Spring Boot... && set SERVER_PORT=%SERVER_PORT% && set PGPASSWORD=postgres && C:\tools\apache-maven-3.9.15\bin\mvn.cmd spring-boot:run"
 
-:: Wait a few seconds before starting the frontend
+:: Wait before starting the frontend
 timeout /t 5 /nobreak >nul
 
 :: Start the Frontend in a new window
-echo Launching Frontend (Port 8126)...
-start "Spatify Frontend" cmd /k "cd /d %~dp0spatify-frontend && title Spatify Frontend Server && color 0A && echo Starting React Dev Server... && npm run dev"
+echo Launching Frontend (Port %FRONTEND_PORT%)...
+start "Spatify Frontend" cmd /k "cd /d %~dp0spatify-frontend && title Spatify Frontend Server && color 0A && echo Starting React Dev Server... && set VITE_PORT=%FRONTEND_PORT% && npm run dev"
 
 echo.
 echo ===================================================
 echo All services launched!
-echo Backend API running at: http://10.80.58.230:5218
-echo Frontend running at:    http://10.80.58.230:8126
+echo Backend API running at: http://localhost:%SERVER_PORT%
+echo Frontend running at:    http://localhost:%FRONTEND_PORT%
 echo ===================================================
 echo You can now close this window.
 pause
