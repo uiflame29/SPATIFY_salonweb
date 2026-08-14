@@ -13,6 +13,16 @@ spatify-frontend/dist/
 spatify-frontend/build/
 spatify-frontend/.cache/
 spatify-frontend/.vite/
+spatify-frontend/coverage/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+*.crt
 
 # OS / editor
 .DS_Store
@@ -24,10 +34,11 @@ Thumbs.db
 
 # Logs
 *.log
-
-# Env / secrets
-.env
-.env.*
+npm-debug.log*
 
 # Misc
 *.class
+
+# Local database backups
+*.dump
+*.bak
