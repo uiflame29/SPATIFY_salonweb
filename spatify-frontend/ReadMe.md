@@ -1,7 +1,6 @@
 Test Accounts
 Role	Full Name	Email Address	Password
 Admin	Alexandra Chen	admin@spatify.com	Alex@Spatify2026
-Admin	Default Admin	admin	admin123
 Admin	Admin Spatify	admin@spatify.ph	Admin@123456!
 Manager	Michael Torres	manager@spatify.com	Mich@Spatify2026
 Manager	Manager Spatify	manager@spatify.ph	Manager@123456!
